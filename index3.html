@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Delegate to Prateek — Animated Portfolio</title>
+  <meta name="description" content="Delegate to Prateek — Project Coordinator & VA." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <style>
+    header.site-header { transition: transform .28s ease, box-shadow .28s ease; z-index:80; }
+    header.hidden-up { transform: translateY(-120%); }
+    @keyframes marquee-left { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+    .marquee { display: inline-flex; gap:2.5rem; align-items:center; width:200%; animation: marquee-left 18s linear infinite; }
+    .marquee:hover { animation-play-state: paused; }
+    .float { transform: translateZ(0); transition: transform .28s ease; }
+    .float:hover { transform: translateY(-8px) scale(1.01); }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+  <header class="site-header fixed top-0 left-0 right-0 bg-white/85 backdrop-blur shadow">
+    <div class="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-indigo-600 to-indigo-400 flex items-center justify-center text-white font-bold">PP</div>
+        <div>
+          <div class="text-xs text-gray-500">Brand</div>
+          <div class="text-lg font-semibold">Delegate to Prateek</div>
+        </div>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#about" class="hover:text-indigo-600">About</a>
+        <a href="#projects" class="hover:text-indigo-600">Portfolio</a>
+        <a href="#clients" class="hover:text-indigo-600">Clients</a>
+        <a href="#case-studies" class="hover:text-indigo-600">Case Studies</a>
+        <a href="#contact" class="hover:text-indigo-600">Contact</a>
+        <!-- Portfolio download (you can replace with a full portfolio PDF if available) -->
+        <a id="topDownload" href="https://drive.google.com/uc?export=download&id=1s_Pc9gNtZn33awkQ57HSWpuasgrr1I70" class="ml-4 inline-flex items-center gap-2 px-3 py-2 bg-indigo-600 text-white rounded">Portfolio</a>
+      </nav>
+
+      <div class="md:hidden">
+        <button id="mobileBtn" class="p-2 rounded hover:bg-gray-100">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h18" stroke="#374151" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div id="mobileMenu" class="hidden md:hidden bg-white shadow-sm">
+    <div class="px-6 py-4 flex flex-col gap-2">
+      <a href="#about">About</a>
+      <a href="#projects">Portfolio</a>
+      <a href="#clients">Clients</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+
+  <main class="pt-28">
+    <!-- HERO -->
+    <section class="py-20">
+      <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
+        <div data-aos="fade-right" data-aos-delay="100">
+          <h1 class="text-4xl md:text-5xl font-extrabold">Delegate to Prateek</h1>
+          <p class="mt-4 text-lg text-gray-600 max-w-xl">I help deliver multi-discipline projects on time — accurate BOQs, clean compliance, and efficient billing. Worked with clients including Maruti Suzuki, Airtel & Reliance.</p>
+
+          <div class="mt-6 flex gap-4">
+            <a href="#projects" class="px-5 py-3 border border-indigo-600 text-indigo-600 rounded-lg">See Portfolio</a>
+            <a href="https://drive.google.com/uc?export=download&id=1s_Pc9gNtZn33awkQ57HSWpuasgrr1I70" class="px-5 py-3 bg-indigo-600 text-white rounded-lg inline-flex items-center gap-2">Download <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M12 3v12" stroke="white" stroke-width="2" stroke-linecap="round"/><path d="M8 11l4 4 4-4" stroke="white" stroke-width="2" stroke-linecap="round"/></svg></a>
+          </div>
+
+          <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-4">
+            <div class="bg-white rounded-lg p-4 shadow float text-center"><div class="text-sm text-gray-500">Clients</div><div class="text-xl font-semibold">Maruti, Airtel</div></div>
+            <div class="bg-white rounded-lg p-4 shadow float text-center"><div class="text-sm text-gray-500">BOQ Value</div><div class="text-xl font-semibold"><span class="count" data-target="11">0</span> Cr</div></div>
+            <div class="bg-white rounded-lg p-4 shadow float text-center"><div class="text-sm text-gray-500">Experience</div><div class="text-xl font-semibold">2+ yrs</div></div>
+            <div class="bg-white rounded-lg p-4 shadow float text-center"><div class="text-sm text-gray-500">Skills</div><div class="text-xl font-semibold">Excel · BOQ · EHS</div></div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center" data-aos="zoom-in" data-aos-delay="200">
+          <div class="w-full max-w-md rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-indigo-600 to-indigo-400 text-white p-8">
+            <div class="text-sm opacity-90">Project Coordinator</div>
+            <div class="mt-4 text-2xl font-bold">Prateek Pathak</div>
+            <div class="mt-2">Delivering accurate BOQs & compliant projects.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-12 bg-white">
+      <div class="max-w-5xl mx-auto px-6">
+        <h2 class="text-2xl font-semibold" data-aos="fade-up">About</h2>
+        <p class="mt-4 text-gray-600" data-aos="fade-up" data-aos-delay="80">Results-driven Project Coordinator experienced in BOQs, EHS, HR compliance, vendor negotiation and Excel dashboards. I ensure on-time delivery and accurate billing.</p>
+        <div class="mt-6 grid md:grid-cols-3 gap-6">
+          <div class="p-4 bg-gray-50 rounded shadow" data-aos="fade-up" data-aos-delay="120">
+            <h4 class="font-semibold">Core Skills</h4>
+            <ul class="mt-2 text-sm text-gray-600 list-disc pl-5">
+              <li>BOQ & Costing</li>
+              <li>EHS/HR Compliance</li>
+              <li>Excel Dashboards</li>
+            </ul>
+          </div>
+
+          <div class="p-4 bg-gray-50 rounded shadow" data-aos="fade-up" data-aos-delay="160">
+            <h4 class="font-semibold">Tools</h4>
+            <p class="mt-2 text-sm text-gray-600">Excel, AutoCAD (basic), Canva, MS Office</p>
+          </div>
+
+          <div class="p-4 bg-gray-50 rounded shadow" data-aos="fade-up" data-aos-delay="200">
+            <h4 class="font-semibold">Contact</h4>
+            <p class="mt-2 text-sm text-gray-600">Faridabad, Haryana<br/>Social links below</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="projects" class="py-12">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-2xl font-semibold" data-aos="fade-up">Portfolio</h2>
+        <p class="text-gray-600 mt-2" data-aos="fade-up" data-aos-delay="80">Sample deliverables: BOQs, EHS templates, dashboards and SOPs.</p>
+
+        <div class="mt-6 grid md:grid-cols-3 gap-6">
+          <div class="bg-white rounded-lg shadow p-6 float" data-aos="fade-up">
+            <h3 class="font-semibold">BOQ Sample</h3>
+            <p class="mt-2 text-sm text-gray-600">Sanitised BOQ sample (download).</p>
+            <div class="mt-4 flex gap-3">
+              <a href="https://docs.google.com/spreadsheets/d/1HM9a4IOuvpOCvOR_TY-G2JarK0cLh_2x/export?format=xlsx" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 bg-indigo-600 text-white rounded inline-flex items-center gap-2">Download BOQ Sample</a>
+              <a href="#case-studies" class="px-3 py-1.5 border rounded">Case Study</a>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow p-6 float" data-aos="fade-up" data-aos-delay="80">
+            <h3 class="font-semibold">11 Cr BOQ</h3>
+            <p class="mt-2 text-sm text-gray-600">Complete 11 Cr BOQ (download).</p>
+            <div class="mt-4 flex gap-3">
+              <a href="https://docs.google.com/spreadsheets/d/1GOagZ0ICJ21mEiTPPMBiy20nc529dXVS/export?format=xlsx" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 bg-indigo-600 text-white rounded">Download 11 Cr BOQ</a>
+              <a href="#case-studies" class="px-3 py-1.5 border rounded">Case Study</a>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow p-6 float" data-aos="fade-up" data-aos-delay="160">
+            <h3 class="font-semibold">EHS Monthly Report</h3>
+            <p class="mt-2 text-sm text-gray-600">Monthly EHS reporting template (download).</p>
+            <div class="mt-4 flex gap-3">
+              <a href="https://docs.google.com/spreadsheets/d/1O05A2PoerQmhNXh5AhuGFuP2NfV7TNY0/export?format=xlsx" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 bg-indigo-600 text-white rounded">Download EHS Report</a>
+              <a href="#templates" class="px-3 py-1.5 border rounded">See Templates</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLIENTS MARQUEE -->
+    <section id="clients" class="py-10 bg-gradient-to-b from-white to-gray-50">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-2xl font-semibold" data-aos="fade-up">Clients / Projects I’ve Worked With</h2>
+        <div class="mt-4 overflow-hidden" data-aos="fade-up" data-aos-delay="80">
+          <div class="marquee">
+            <a href="#" target="_blank" rel="noopener noreferrer"><img src="https://drive.google.com/uc?export=view&id=1Vb6zEMiWPjB3dE8_hKR9zwDbChYY0m1E" alt="Client1" class="h-12 object-contain opacity-90" onerror="this.src='https://via.placeholder.com/150x60?text=Client'"></a>
+            <a href="#" target="_blank" rel="noopener noreferrer"><img src="https://drive.google.com/uc?export=view&id=1SdXKgAb7wCBYayPltkPwS7tq6h3byUdy" alt="Client2" class="h-12 object-contain opacity-90" onerror="this.src='https://via.placeholder.com/150x60?text=Client'"></a>
+            <a href="#" target="_blank" rel="noopener noreferrer"><img src="https://drive.google.com/uc?export=view&id=1ZGq7aDRac-mI6ZTc_dgR_IdaLn5JvsaY" alt="Client3" class="h-12 object-contain opacity-90" onerror="this.src='https://via.placeholder.com/150x60?text=Client'"></a>
+            <a href="#" target="_blank" rel="noopener noreferrer"><img src="https://drive.google.com/uc?export=view&id=1i9xnTEYBborBx_DHpLtAlMSHyLBNqzSy" alt="Client4" class="h-12 object-contain opacity-90" onerror="this.src='https://via.placeholder.com/150x60?text=Client'"></a>
+            <a href="#" target="_blank" rel="noopener noreferrer"><img src="https://drive.google.com/uc?export=view&id=1GXGlEU6-oEt7Fy4S6WD3IKE-YF2Eq5RR" alt="Client5" class="h-12 object-contain opacity-90" onerror="this.src='https://via.placeholder.com/150x60?text=Client'"></a>
+
+            <!-- duplicate logos for seamless loop -->
+            <a href="#" target="_blank" rel="noopener noreferrer"><img src="https://drive.google.com/uc?export=view&id=1Vb6zEMiWPjB3dE8_hKR9zwDbChYY0m1E" alt="Client1" class="h-12 object-contain opacity-90" onerror="this.src='https://via.placeholder.com/150x60?text=Client'"></a>
+            <a href="#" target="_blank" rel="noopener noreferrer"><img src="https://drive.google.com/uc?export=view&id=1SdXKgAb7wCBYayPltkPwS7tq6h3byUdy" alt="Client2" class="h-12 object-contain opacity-90" onerror="this.src='https://via.placeholder.com/150x60?text=Client'"></a>
+            <a href="#" target="_blank" rel="noopener noreferrer"><img src="https://drive.google.com/uc?export=view&id=1ZGq7aDRac-mI6ZTc_dgR_IdaLn5JvsaY" alt="Client3" class="h-12 object-contain opacity-90" onerror="this.src='https://via.placeholder.com/150x60?text=Client'"></a>
+            <a href="#" target="_blank" rel="noopener noreferrer"><img src="https://drive.google.com/uc?export=view&id=1i9xnTEYBborBx_DHpLtAlMSHyLBNqzSy" alt="Client4" class="h-12 object-contain opacity-90" onerror="this.src='https://via.placeholder.com/150x60?text=Client'"></a>
+            <a href="#" target="_blank" rel="noopener noreferrer"><img src="https://drive.google.com/uc?export=view&id=1GXGlEU6-oEt7Fy4S6WD3IKE-YF2Eq5RR" alt="Client5" class="h-12 object-contain opacity-90" onerror="this.src='https://via.placeholder.com/150x60?text=Client'"></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASE STUDIES -->
+    <section id="case-studies" class="py-12 bg-white">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-2xl font-semibold" data-aos="fade-up">Case Studies</h2>
+        <div class="mt-6 grid md:grid-cols-3 gap-6">
+          <article class="p-6 bg-gray-50 rounded shadow" data-aos="fade-up">
+            <h4 class="font-semibold">Reducing Material Wastage</h4>
+            <p class="mt-2 text-sm text-gray-600">Implemented tracking system that improved billing accuracy & sped RA approvals.</p>
+          </article>
+
+          <article class="p-6 bg-gray-50 rounded shadow" data-aos="fade-up" data-aos-delay="60">
+            <h4 class="font-semibold">₹11 Cr BOQ</h4>
+            <p class="mt-2 text-sm text-gray-600">Prepared multi-discipline BOQ with vendor negotiation & procurement clarity.</p>
+          </article>
+
+          <article class="p-6 bg-gray-50 rounded shadow" data-aos="fade-up" data-aos-delay="120">
+            <h4 class="font-semibold">Operations Revival</h4>
+            <p class="mt-2 text-sm text-gray-600">Overhauled hiring & pricing strategy to revive operations & improve sales.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEMPLATES -->
+    <section id="templates" class="py-12">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-2xl font-semibold" data-aos="fade-up">Downloadable Templates & Docs</h2>
+        <p class="text-gray-600 mt-2">Click to download or preview (files hosted on Google Drive).</p>
+
+        <div class="mt-6 grid md:grid-cols-3 gap-6">
+          <div class="bg-white rounded-lg shadow p-6" data-aos="fade-up">
+            <h4 class="font-semibold">HIRA (Doc 1)</h4>
+            <p class="text-sm text-gray-600 mt-2">HIRA document (download PDF).</p>
+            <div class="mt-3">
+              <a href="https://docs.google.com/document/d/1l1nuTmgxmpLbbFQuFzwVqfO16o9LkyYL/export?format=pdf" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 bg-indigo-600 text-white rounded">Download HIRA</a>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow p-6" data-aos="fade-up" data-aos-delay="40">
+            <h4 class="font-semibold">HIRA (Doc 2)</h4>
+            <p class="text-sm text-gray-600 mt-2">Alternate HIRA template.</p>
+            <div class="mt-3">
+              <a href="https://docs.google.com/document/d/1jqHabNf2e0bCUud7cAetarakMNBDz9Cg/export?format=pdf" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 bg-indigo-600 text-white rounded">Download HIRA (2)</a>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow p-6" data-aos="fade-up" data-aos-delay="80">
+            <h4 class="font-semibold">Labour Compliance (Folder)</h4>
+            <p class="text-sm text-gray-600 mt-2">Contains 8 labour compliance files.</p>
+            <div class="mt-3">
+              <a href="https://drive.google.com/drive/folders/1z78INJ8JcK8JEsVfRLNIQ8ik41Yqnzmt?usp=drive_link" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 bg-indigo-600 text-white rounded">Open Labour Files</a>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow p-6" data-aos="fade-up" data-aos-delay="120">
+            <h4 class="font-semibold">Method Statement 1</h4>
+            <p class="text-sm text-gray-600 mt-2">Method statement PDF (download).</p>
+            <div class="mt-3">
+              <a href="https://drive.google.com/uc?export=download&id=1H24xZ4O8gApS6FTW9n5RwU6jhMt4SJry" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 bg-indigo-600 text-white rounded">Download</a>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow p-6" data-aos="fade-up" data-aos-delay="160">
+            <h4 class="font-semibold">Method Statement 2</h4>
+            <p class="text-sm text-gray-600 mt-2">Method statement PDF (download).</p>
+            <div class="mt-3">
+              <a href="https://drive.google.com/uc?export=download&id=1uxcD6qDTSFZBwkr-QY-Ov5739jZ4pGzm" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 bg-indigo-600 text-white rounded">Download</a>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow p-6" data-aos="fade-up" data-aos-delay="200">
+            <h4 class="font-semibold">Quality Assurance Plan</h4>
+            <p class="text-sm text-gray-600 mt-2">QAP document (download).</p>
+            <div class="mt-3">
+              <a href="https://drive.google.com/uc?export=download&id=1s_Pc9gNtZn33awkQ57HSWpuasgrr1I70" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 bg-indigo-600 text-white rounded">Download QAP</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-12 bg-white">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <h2 class="text-2xl font-semibold" data-aos="fade-up">Get in Touch</h2>
+        <p class="mt-2 text-gray-600" data-aos="fade-up" data-aos-delay="60">Click below icon to contact me however you are comfortable</p>
+
+        <div class="mt-6 flex justify-center gap-4" data-aos="fade-up" data-aos-delay="100">
+          <a href="#" target="_blank" class="p-3 rounded-full bg-white shadow social-btn" aria-label="LinkedIn">
+            <img src="https://drive.google.com/uc?export=view&id=1og1PUD7BU-GDGjlJYeV-3EzO_DZ3Fzx6" class="w-6 h-6" alt="LinkedIn" onerror="this.src='https://via.placeholder.com/36?text=L'">
+          </a>
+
+          <a href="#" target="_blank" class="p-3 rounded-full bg-white shadow social-btn" aria-label="Instagram">
+            <img src="https://drive.google.com/uc?export=view&id=1n9OZYeQHTmetolRfGzJy5NfEOBM_WHt_" class="w-6 h-6" alt="Instagram" onerror="this.src='https://via.placeholder.com/36?text=I'">
+          </a>
+
+          <a href="#" target="_blank" class="p-3 rounded-full bg-white shadow social-btn" aria-label="Facebook">
+            <img src="https://drive.google.com/uc?export=view&id=1BFCg7GO-TwLnfLP-dEBGU4OeykgVviUw" class="w-6 h-6" alt="Facebook" onerror="this.src='https://via.placeholder.com/36?text=F'">
+          </a>
+
+          <a href="#" target="_blank" class="p-3 rounded-full bg-white shadow social-btn" aria-label="Freelancer">
+            <img src="https://drive.google.com/uc?export=view&id=1aQMJUpsWSTG4eww-Sq61R3eaEmlzr1Kb" class="w-6 h-6" alt="Freelancer" onerror="this.src='https://via.placeholder.com/36?text=Fr'">
+          </a>
+
+          <a href="#" target="_blank" class="p-3 rounded-full bg-white shadow social-btn" aria-label="WhatsApp">
+            <img src="https://drive.google.com/uc?export=view&id=1fkTH4esV-bTun0u0urbY5yiPnVPRbfnd" class="w-6 h-6" alt="WhatsApp" onerror="this.src='https://via.placeholder.com/36?text=W'">
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="py-8 text-center text-sm text-gray-500">© <span id="yr"></span> Delegate to Prateek — Project Coordination & Virtual Assistance</footer>
+
+  <script>
+    AOS.init({ once: true, duration: 700 });
+
+    document.getElementById('mobileBtn').addEventListener('click', ()=> {
+      const m = document.getElementById('mobileMenu');
+      m.classList.toggle('hidden');
+    });
+
+    let lastScroll = 0;
+    const headerEl = document.querySelector('header.site-header');
+    window.addEventListener('scroll', () => {
+      const s = window.scrollY;
+      if (s > lastScroll && s > 100) { headerEl.classList.add('hidden-up'); }
+      else { headerEl.classList.remove('hidden-up'); }
+      lastScroll = s;
+    }, { passive: true });
+
+    document.querySelectorAll('.count').forEach(el => {
+      const target = +el.dataset.target || 0;
+      let cur = 0;
+      const step = Math.max(1, Math.round(target/60));
+      const timer = setInterval(()=> {
+        cur += step;
+        if (cur >= target) { cur = target; clearInterval(timer); }
+        el.textContent = cur;
+      }, 20);
+    });
+
+    document.getElementById('yr').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
